@@ -1,0 +1,331 @@
+*
+  margin: 0
+  padding: 0
+
+li
+  display: inline-block
+  list-style: none
+
+a
+  text-decoration: none
+  color: #ffffff
+
+$white: #ffffff
+
+select
+  outline: none
+
+/*fonts*/
+@mixin font_ssp_600_16_20
+  font-family: 'Source Sans Pro', sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 16px
+  line-height: 20px
+
+@mixin font_ssp_normal
+  @include font_ssp_600_16_20
+  font-weight: normal
+
+@mixin font_ssp_normal_14_16
+  @include font_ssp_normal
+  font-size: 14px
+  line-height: 16px
+
+@mixin font_ssp_normal_14_18
+  @include font_ssp_normal_14_16
+  line-height: 18px
+
+@mixin font_ssp_600_18_24
+  @include font_ssp_600_16_20
+  font-size: 18px
+  line-height: 24px
+
+@mixin font_actor_19_22
+  font-family: 'Actor', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 19px
+  line-height: 22px
+  color: #1C2E36
+
+.font_actor_19_22
+  @include font_actor_19_22
+
+.font_actor_18_21_blue
+  @include font_actor_19_22
+  font-size: 18px
+  line-height: 21px
+  color: #0084BA
+
+/*fonts end*/
+.padding_left
+  padding-left: 28px
+
+.container
+  max-width: 1440px
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  flex-wrap: wrap
+
+.header
+  width: 100%
+  display: flex
+  flex-direction: column
+
+.header__input
+  @include font_ssp_normal
+  width: 400px
+  height: 55px
+  margin-right: 20px
+  z-index: 0
+  padding-left: 30px
+
+.header__select
+  @include font_ssp_600_16_20
+  background-color: inherit
+  color: $white
+  border: none
+
+.menu_dropdown
+  display: none
+
+.logo
+  width: 63px
+  height: 50px
+  margin-right: 70px
+
+.alignment_help
+  display: flex
+  align-items: center
+
+.header__nav
+  width: 100%
+
+.top-nav
+  @include font_ssp_600_16_20
+  display: flex
+  height: 80px
+  background-color: #0084BA
+
+.top-nav_child
+  display: flex
+  align-items: center
+  width: 50%
+
+.top-nav__left
+  padding-left: 33px
+  box-sizing: border-box
+
+.top-nav__right
+  justify-content: flex-end
+
+.top-nav__right__icon
+  margin-right: 6px
+
+.header__menu-item
+  margin-right: 30px
+
+.header__menu-item:nth-child(3n)
+  margin-right: 43px
+
+.header__menu-item:last-child
+  margin-right: 17px
+
+button
+  background-color: inherit
+  border: none
+  color: $white
+  @include font_ssp_600_16_20
+
+.bottom-nav
+  @include font_ssp_600_18_24
+  display: flex
+  align-items: center
+  height: 40px
+  background-color: #0098D7
+  justify-content: center
+
+.bottom-nav_ul
+  width: 70%
+  display: flex
+  justify-content: space-between
+
+
+.header__menu-category
+  @include font_ssp_normal_14_16
+  text-decoration: none
+  height: 34px
+  display: flex
+  align-items: center
+  a
+    color: inherit
+
+.red_color
+  color: #E26D5A
+
+.page
+  display: none
+
+  /*header end*/
+
+.main
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+
+h1
+  padding-top: 10px
+  padding-bottom: 25px
+
+/*slider*/
+
+.slider
+  width: 100%
+  display: flex
+  align-items: center
+
+.slides
+  width: 100%
+
+img
+  width: 100%
+
+.prev, .next
+  cursor: pointer
+  position: absolute
+  display: flex
+  width: 50px
+  height: 50px
+  color: #ffffff
+  background-color: #E26D5A
+  transition: 1s ease-in-out
+  font-size: 24px
+  line-height: 28px
+  justify-content: center
+  align-items: center
+
+.prev
+  left: 20%
+
+.next
+  right: 20%
+
+.prev:hover, .next:hover
+  background-color: blue
+
+.slides_animation
+  animation-name: slides_animation
+  animation-duration: 2s
+  -webkit-animation-name: slides_animation
+  -webkit-animation-duration: 2s
+
+@keyframes slides_animation
+  opacity: .1
+  opacity: 1
+
+/*slider end*/
+
+.filters
+  width: 100%
+  height: 86px
+  display: flex
+  align-items: center
+  border-bottom: 1px solid #E2E2E2
+
+.filters__form
+  display: flex
+
+h2
+  margin-right: 40px
+
+.select
+  border: 1px solid #C2C2C2
+  box-sizing: border-box
+  border-radius: 3px
+  height: 55px
+  color: #666666
+  padding-left: 5px
+  display: flex
+  align-items: center
+  @include font_ssp_normal_14_18
+
+
+.fa-chevron-down::before
+  margin-left: 20px
+
+.select_1, .select_2, .select_3
+
+
+.select_1
+  width: 127px
+
+.select_2
+  width: 160px
+
+.select_3
+  width: 104px
+
+.select:first-child
+  margin-right: 120px
+
+.select:last-child
+  margin-left: 16px
+
+.sel_none
+  display: none
+
+.main_items
+  width: 50%
+  display: flex
+  flex-wrap: wrap
+  padding-left: 28px
+  box-sizing: border-box
+
+.main_items__aside
+  width: 100%
+  height: 90px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.main_items__result
+  display: inline-block
+  @include font_ssp_normal_14_18
+
+.main_items__select
+  display: inline-block
+  border: none
+  @include font_ssp_normal_14_18
+
+.main_items__item
+  width: 210px
+  height: 250px
+  margin-right: 20px
+  margin-bottom: 40px
+
+figure
+  width: 100%
+  height: 100%
+
+figcaption
+  height: 100px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-top: 13px
+
+.map
+  position: sticky
+  top: 0
+  width: 50%
+  box-sizing: border-box
+  height: 720px
+  margin-top: 90px
+
+iframe
+  width: 100%
+
+.map_btn1, .map_btn2
+  display: none
